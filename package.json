@@ -1,6 +1,6 @@
 {
     "name": "@sinkapoy/home-integrations-commands",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "commands module for sinkahome",
     "main": "./dist/index.js",
     "browser": "./dist/index.js",
@@ -11,14 +11,10 @@
     "scripts": {
         "build": "rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript && dts-bundle-generator -o dist/index.d.ts --project tsconfig.json src/index.ts"
     },
-    "peerDependencies": {
-        "@sinkapoy/home-core": "^0.0.1"
-    },
     "devDependencies": {
         "@rollup/plugin-node-resolve": "^15.1.0",
         "@rollup/plugin-typescript": "^11.1.2",
         "dts-bundle-generator": "^8.0.1",
-        "prettier": "^3.0.0",
         "rollup": "^3.26.0",
         "rollup-plugin-commonjs": "^10.1.0",
         "rollup-plugin-json": "^4.0.0",
@@ -28,7 +24,8 @@
         "tslib": "^2.6.0"
     },
     "dependencies": {
-        "@ash.ts/ash": "^1.3.0"
+        "@ash.ts/ash": "^1.3.0",
+        "@sinkapoy/home-core": "*"
     },
     "packageManager": "yarn@3.6.1",
     "files": [
